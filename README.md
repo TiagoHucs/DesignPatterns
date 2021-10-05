@@ -1,2 +1,2 @@
 # DesignPatters
-Repositorio para relembrar e preticar padrões GoF
+Repositorio para relembrar e praticar padrões GoF
