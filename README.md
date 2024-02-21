@@ -1,2 +1,2 @@
 # DesignPatterns
-Repositorio para relembrar e praticar padrões GoF
+Repositorio para praticar padrões de projeto
