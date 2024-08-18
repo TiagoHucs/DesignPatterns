@@ -1,6 +1,7 @@
 package creational.factorymethod;
 
-public interface Capsule {
+interface Capsula {
     void launch();
     String getStatus();
+    String getNome();
 }
