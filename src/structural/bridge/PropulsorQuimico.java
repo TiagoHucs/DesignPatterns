@@ -2,7 +2,8 @@ package structural.bridge;
 
 public class PropulsorQuimico implements Propulsor{
     @Override
-    public void acionar() {
+    public void
+    acionar() {
         System.out.println("Acionando propulsor quimico");
     }
 }
