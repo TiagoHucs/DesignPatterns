@@ -4,14 +4,21 @@ class Main {
 
     public static void main(String[] args){
         // Criando uma nave básica
-        NaveEspacial nave = new NaveBasica();
+        INave nave = new Nave();
 
         // Adicionando módulos à nave
         nave = new SistemaDeArmas(nave);
-        nave = new EscudoDeDefesa(nave);
+        nave = new SistemaDeDefesa(nave);
         nave = new SistemaDePropulsao(nave);
+        nave = new NaveDecorator(nave) {
+            @Override
+            public void ativar() {
+                super.ativar();
+                System.out.println("Ativando Sistemas Utilitarios personalizados");
+            }
+        };
 
         // Mostrando o resultado
-        System.out.println(nave.montar());
+        nave.ativar();
     }
 }

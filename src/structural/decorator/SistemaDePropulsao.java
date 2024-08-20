@@ -2,12 +2,13 @@ package structural.decorator;
 
 class SistemaDePropulsao extends NaveDecorator {
 
-    SistemaDePropulsao(NaveEspacial nave) {
+    SistemaDePropulsao(INave nave) {
         super(nave);
     }
 
     @Override
-    public String montar(){
-        return super.montar() + " + Sistema de propulsao";
+    public void ativar() {
+        super.ativar();
+        System.out.println("Ativando Sistemas de Propulsão");
     }
 }

@@ -1,14 +1,15 @@
 package structural.decorator;
 
-class SistemaDeArmas extends NaveDecorator{
+class SistemaDeArmas extends NaveDecorator {
 
-
-    SistemaDeArmas(NaveEspacial nave) {
+    SistemaDeArmas(INave nave) {
         super(nave);
     }
 
     @Override
-    public String montar() {
-        return super.montar() + " + Escudo de defesa";
+    public void ativar() {
+        super.ativar();
+        System.out.println("Ativando Sistemas de Armas");
     }
+
 }

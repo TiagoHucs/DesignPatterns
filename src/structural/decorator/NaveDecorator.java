@@ -1,15 +1,15 @@
 package structural.decorator;
 
-abstract class NaveDecorator implements NaveEspacial {
-    protected NaveEspacial nave;
+abstract class NaveDecorator implements INave {
+    protected INave nave;
 
-    NaveDecorator(NaveEspacial nave){
+    NaveDecorator(INave nave){
         this.nave = nave;
     }
 
     @Override
-    public String montar() {
-        return nave.montar();
+    public void ativar() {
+        nave.ativar();
     }
 
 }
