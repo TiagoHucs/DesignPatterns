@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ControleDaMissao {
+class ControleDaMissao {
 
     private static ControleDaMissao uniqueInstance;
     private List<String> dados = new ArrayList<>();

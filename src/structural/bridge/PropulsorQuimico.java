@@ -1,6 +1,6 @@
 package structural.bridge;
 
-public class PropulsorQuimico implements Propulsor{
+class PropulsorQuimico implements Propulsor{
     @Override
     public void
     acionar() {

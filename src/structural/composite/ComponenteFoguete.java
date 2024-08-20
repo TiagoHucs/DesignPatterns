@@ -1,5 +1,5 @@
 package structural.composite;
 
-public interface ComponenteFoguete {
+interface ComponenteFoguete {
     void exibirDetalhes();
 }

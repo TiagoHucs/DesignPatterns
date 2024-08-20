@@ -1,5 +1,5 @@
 package structural.bridge;
 
-public interface Propulsor {
+interface Propulsor {
     void acionar();
 }

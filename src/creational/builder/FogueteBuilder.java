@@ -1,10 +1,6 @@
 package creational.builder;
 
-/**
-* Evita que a representação da classe Rocket fique poluida com varios contrutores
-* Centraliza a personalização da construção aqui nesta classe
-* */
-public class FogueteBuilder {
+class FogueteBuilder {
 
     private Foguete rocket;
 
