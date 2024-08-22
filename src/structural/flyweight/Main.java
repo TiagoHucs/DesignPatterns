@@ -3,11 +3,13 @@ package structural.flyweight;
 public class Main {
 
     public static void main(String[] args) {
-        normalTest();
-        flyweightTest();
+        double normal = normalTest();
+        double flyweight = flyweightTest();
+        Double economiaPercentual = ((normal - flyweight) / normal) * 100;
+        System.out.println("Você economizou " + economiaPercentual.shortValue() + "% do valor original.");
     }
 
-    public static void normalTest(){
+    public static double normalTest(){
         long beforeMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         // Criando 100000 foguetes sem Flyweight
@@ -17,10 +19,11 @@ public class Main {
 
         long afterMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         long memoryUsage = afterMemory - beforeMemory;
-        System.out.println("Memória usada sem Flyweight: " + memoryUsage + " bytes");
+        System.out.println("Memória usada sem Flyweight: " + convert(memoryUsage) + " Mb");
+        return memoryUsage;
     }
 
-    public static void flyweightTest(){
+    public static double flyweightTest(){
         long beforeMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         RocketType falconType = new RocketType("Falcon", "SpaceX");
@@ -32,6 +35,11 @@ public class Main {
 
         long afterMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         long memoryUsage = afterMemory - beforeMemory;
-        System.out.println("Memória usada com Flyweight: " + memoryUsage + " bytes");
+        System.out.println("Memória usada com Flyweight: " + convert(memoryUsage) + " Mb");
+        return memoryUsage;
+    }
+
+    public static double convert(long value){
+        return (value / 1024) ;
     }
 }
