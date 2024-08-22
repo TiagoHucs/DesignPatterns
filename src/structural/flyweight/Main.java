@@ -1,5 +1,7 @@
 package structural.flyweight;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class Main {
 
         // Criando 100000 foguetes sem Flyweight
         for (int i = 0; i < 100000; i++) {
-            new Rocket("Falcon", "SpaceX", 5000 + i);
+            new Rocket("Falcon", "SpaceX", BigDecimal.TEN, 5000 + i);
         }
 
         long afterMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
@@ -26,7 +28,7 @@ public class Main {
     public static double flyweightTest(){
         long beforeMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
-        RocketType falconType = new RocketType("Falcon", "SpaceX");
+        RocketType falconType = new RocketType("Falcon", "SpaceX", BigDecimal.TEN);
 
         // Criando 100000 foguetes com Flyweight
         for (int i = 0; i < 100000; i++) {
