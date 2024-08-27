@@ -2,7 +2,7 @@ package creational.abstractfactory.rockets.falcon;
 
 import creational.abstractfactory.interfaces.Payload;
 
-public class Satelite implements Payload {
+class Satelite implements Payload {
 
     private String name;
 
