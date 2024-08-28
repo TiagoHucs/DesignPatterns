@@ -1,6 +1,6 @@
 package behavioral.mediator;
 
-public abstract class Satellite {
+abstract class Satellite {
     protected ControlCenter controlCenter;
     protected String name;
 
