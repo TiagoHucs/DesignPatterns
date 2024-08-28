@@ -6,14 +6,13 @@ import java.util.Map;
 class CommandInterpreter {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
 
     Map<String, Command> commands = new HashMap<>();
 
     CommandInterpreter(){
-        commands.put("Lancar",new LaunchCommand());
-        commands.put("Acelerar",new AccelerateCommand());
-        commands.put("Abortar",new AbortCommand());
+        commands.put("Launch",new LaunchCommand());
+        commands.put("Accelerate",new AccelerateCommand());
+        commands.put("Abort",new AbortCommand());
     }
 
     void interpret(String strCommand){
